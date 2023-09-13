@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav id="navigation">
+
+    </nav>
+    <div id="div">
+        
+    </div>
+    <script>
+        //PART1
+        var navigation = document.getElementById("navigation");
+        var ul = document.createElement('ul');
+        var li1   = document.createElement('li');
+        var li2 = document.createElement('li');
+        var li3 = document.createElement('li')
+
+        li1.textContent = "HOME"
+        li2.textContent = "ABOUT"
+        li3.textContent = "CONTACT"
+
+        li1.style.display= "inline"
+        li2.style.display= "inline"
+        li3.style.display= "inline"
+        
+        
+        li1.style.padding= "10px"
+        li2.style.padding= "10px"
+        li3.style.padding= "10px"
+        
+
+        navigation.appendChild(ul)
+        ul.appendChild(li1)
+        ul.appendChild(li2)
+        ul.appendChild(li3)
+
+        //PART2
+
+        var div = document.getElementById("div")
+        var form = document.createElement("form")
+        var input1 = document.createElement("input")
+        var input2 = document.createElement('input')
+        var input3 = document.createElement('input')
+        var label = document.createElement('label')
+        var button = document.createElement('button')
+
+        //text content
+        label.textContent = "Remember me"
+        button.textContent = 'LOGIN'
+
+        //styles
+        form.style.width = "60%"
+        form.style.height = "250px"
+        form.style.background = "rgb(19, 38, 92)"
+        form.style.bottom = "'35px"
+        form.style.position = "relative"
+
+        input1.style.width = "80%"
+        input1.style.height= "30px"
+        input1.style.top = "35px"
+        input1.style.bottom = "5px"
+        input1.style.left = "10%"
+        input1.style.position = "relative"
+
+        input2.style.width= "80%"
+        input2.style.height = "30px"
+        input2.style.margin = "10%"
+
+        input3.style.position = "relative"
+        input3.style.left = "10%"
+        input3.style.bottom = "50px"
+
+        label.style.color = "rgb(255,250,250)"
+        label.style.left = "80px"
+        label.style.position = "relative"
+        label.style.bottom = "50px"
+
+        button.style.color = 'rgb(255,250,250)'
+        button.style.background = 'rgb(0, 0, 51)'
+        button.style.width = '40%'
+        button.style.height = '30px'
+        button.style.margin = '20px'
+        button.style.position = 'relative'
+        button.style.bottom = '50px'
+        button.style.left = "70px"
+        button.style.borderRadius = "2px"
+
+        //attributes
+        input1.setAttribute('type','text')
+        input1.setAttribute('placeholder', 'Username')
+
+        input2.setAttribute('type', 'password')
+        input2.setAttribute('placeholder', 'Password')
+
+        input3.setAttribute('type', 'checkbox')
+
+
+        //appendChild
+        div.appendChild(form)
+        form.appendChild(input1)
+        form.appendChild(input2)
+        form.appendChild(input3)
+        form.appendChild(label)
+        form.appendChild(button)
+
+        //EVENTS
+
+        button.addEventListener('click', alerts)
+        button.addEventListener('mouseover', colorChange1)
+        button.addEventListener('mouseout', colorChange2)
+        
+        input.addEventListener('keydown', )
+
+        function alerts(){
+            alert ("მომხარებელი წარმატებით დარეგისტრირდა")
+        }
+        function colorChange1(){
+            button.style.background = "blue"
+        }
+        function colorChange2(){
+            button.style.background = "rgb(0, 0, 51)"
+        }
+
+        
+        
+    </script>
+</body>
+</html>
